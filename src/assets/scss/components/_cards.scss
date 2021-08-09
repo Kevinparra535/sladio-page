@@ -1,0 +1,470 @@
+@import "./../tokens/colors";
+@import "./../tokens/spacings";
+@import "./../tokens/typos";
+
+.cards {
+  padding: $space_x3 $space_x2;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 450px;
+  text-align: left;
+  transition: 1s ease-in-out;
+  border: 3px solid $color-oscuro;
+  background-color: $color-claro;
+  &__type {
+    margin-bottom: $space;
+    @include font-size(13px);
+  }
+  &__title {
+    min-height: 30%;
+    h2 {
+      transition: 0.5s ease-in-out;
+      @include font-size($h3);
+      &:hover {
+        background: -webkit-linear-gradient($color-primario, $color-secundario);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+  &__info {
+    padding: $space_x3 0 $space_x3 0;
+    display: flex;
+    align-items: center;
+    img {
+      margin-right: $space;
+      width: 40px;
+      height: 40px;
+      border: 2px solid $color-oscuro;
+      border-radius: 100%;
+    }
+    p {
+      margin: 0;
+      @include font-size(14px);
+    }
+  }
+  &__tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    a {
+      padding: $space_half $space;
+      margin: 0 $space_half $space 0;
+      border: 1px solid $color-oscuro;
+      color: $color-oscuro;
+      transition: 500ms ease-in-out;
+      @include font-size(11px);
+      &:hover {
+        text-decoration: none;
+        color: $color-claro;
+        background-color: $color-oscuro;
+      }
+    }
+  }
+  &:hover {
+    transition: 0.5s ease-in-out;
+    background: $color-primario;
+    background: -moz-linear-gradient(
+      180deg,
+      get-opacity($color-primario, 0.1) 0%,
+      get-opacity($color-secundario, 0.1) 100%
+    );
+    background: -webkit-linear-gradient(
+      180deg,
+      get-opacity($color-primario, 0.1) 0%,
+      get-opacity($color-secundario, 0.1) 100%
+    );
+    background: linear-gradient(180deg, get-opacity($color-primario, 0.1) 0%, get-opacity($color-secundario, 0.1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b034a",endColorstr="#080926",GradientType=1);
+  }
+}
+
+.card {
+  padding: $space_x2;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  border-top: 3px solid $color-oscuro;
+  border: 3px solid $color-oscuro;
+  border-radius: 1px;
+  color: $color-oscuro;
+  background-color: $color-claro;
+  transition: 1s ease-in-out;
+  &__type {
+    margin-bottom: $space_x2;
+    @include font-size(12px);
+  }
+  &__title {
+    min-height: 30%;
+    h2 {
+      transition: 0.5s ease-in-out;
+      @include font-size($h3);
+      &:hover {
+        background: -webkit-linear-gradient($color-primario, $color-secundario);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+  &__info {
+    padding: $space_x3 0 $space_x3 0;
+    display: flex;
+    align-items: center;
+    img {
+      margin-right: $space;
+      width: 40px;
+      height: 40px;
+      border: 2px solid $color-oscuro;
+      border-radius: 100%;
+    }
+    p {
+      margin: 0;
+      @include font-size(12px);
+    }
+  }
+  &__preview {
+    padding: 0 0 $space_x2 0;
+    p {
+      margin: 0;
+      @include font-size(14px);
+    }
+  }
+  &__tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    a {
+      padding: $space_half $space;
+      border: 1px solid $color-oscuro;
+
+      color: $color-oscuro;
+      transition: 500ms ease-in-out;
+      @include font-size(12px);
+      &:hover {
+        text-decoration: none;
+        color: $color-claro;
+        background-color: $color-oscuro;
+      }
+    }
+    p {
+      margin: 0;
+      @include font-size(15px);
+      img {
+        margin-right: $space_half;
+        width: 18px;
+      }
+    }
+    &--info {
+      display: flex;
+      align-items: center;
+      p {
+        margin-left: $space;
+      }
+    }
+  }
+  &:hover {
+    transition: 0.5s ease-in-out;
+    background: $color-primario;
+    background: -moz-linear-gradient(
+      180deg,
+      get-opacity($color-primario, 0.1) 0%,
+      get-opacity($color-secundario, 0.1) 100%
+    );
+    background: -webkit-linear-gradient(
+      180deg,
+      get-opacity($color-primario, 0.1) 0%,
+      get-opacity($color-secundario, 0.1) 100%
+    );
+    background: linear-gradient(180deg, get-opacity($color-primario, 0.1) 0%, get-opacity($color-secundario, 0.1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b034a",endColorstr="#080926",GradientType=1);
+  }
+}
+
+.adsCards {
+  width: 100%;
+  height: 250px;
+  border: 3px solid $color-oscuro;
+  border-radius: $space;
+  background-color: $color-claro;
+}
+
+.cardsComments {
+  padding: $space_x2 $space_x2;
+  grid-column-gap: $space_x3;
+  margin: $space auto;
+  width: 90%;
+  text-align: left;
+  border: 3px solid $color-bg-oscuro;
+  border-radius: $space;
+  color: $color-oscuro;
+  background-color: $color-claro;
+  @include display-grid;
+  @include grid-template-columns(auto);
+  &__date {
+    padding-top: $space_x3;
+    color: get-opacity($color-oscuro, 0.6);
+    @include font-size(12px);
+  }
+}
+
+.cardResults {
+  padding: $space_x2;
+  position: fixed;
+  width: 100%;
+  border-left: 3px solid $color-oscuro;
+  border-right: 3px solid $color-oscuro;
+  border-bottom: 3px solid $color-oscuro;
+  background-color: $color-claro;
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  a,
+  h3 {
+    color: $color-oscuro;
+    font-weight: $normal;
+    transition: 500ms;
+    @include font-size($p);
+    &:hover {
+      color: $color-primario;
+      text-decoration: none;
+    }
+  }
+  li {
+    padding: $space 0;
+    border-bottom: 1px solid get-opacity($color-oscuro, 0.1);
+  }
+  p {
+    margin: 0;
+    @include font-size($p);
+  }
+}
+
+@include media(desktop-s) {
+  .cards {
+    padding: $space_x3 $space_x2;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 450px;
+    text-align: left;
+    border: 3px solid $color-oscuro;
+    transition: 1s ease-in-out;
+    &__type {
+      margin-bottom: $space;
+      @include font-size(13px);
+    }
+    &__title {
+      min-height: 30%;
+      h2 {
+        transition: 0.5s ease-in-out;
+        @include font-size($h3);
+        &:hover {
+          background: -webkit-linear-gradient($color-primario, $color-secundario);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    &__info {
+      padding: $space_x3 0 $space_x3 0;
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: $space;
+        width: 40px;
+        height: 40px;
+        border: 2px solid $color-oscuro;
+        border-radius: 100%;
+      }
+      p {
+        margin: 0;
+        @include font-size(14px);
+      }
+    }
+    &__tags {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      a {
+        padding: $space_half $space;
+        margin: 0 $space_half $space 0;
+        border: 1px solid $color-oscuro;
+        color: $color-oscuro;
+        transition: 500ms ease-in-out;
+        @include font-size(11px);
+        &:hover {
+          text-decoration: none;
+          color: $color-claro;
+          background-color: $color-oscuro;
+        }
+      }
+    }
+    &:hover {
+      transition: 0.5s ease-in-out;
+      background: $color-primario;
+      background: -moz-linear-gradient(
+        180deg,
+        get-opacity($color-primario, 0.1) 0%,
+        get-opacity($color-secundario, 0.1) 100%
+      );
+      background: -webkit-linear-gradient(
+        180deg,
+        get-opacity($color-primario, 0.1) 0%,
+        get-opacity($color-secundario, 0.1) 100%
+      );
+      background: linear-gradient(
+        180deg,
+        get-opacity($color-primario, 0.1) 0%,
+        get-opacity($color-secundario, 0.1) 100%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b034a",endColorstr="#080926",GradientType=1);
+    }
+  }
+
+  .card {
+    padding: $space_x2;
+    margin-bottom: $space_x3;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    text-align: left;
+    border: 3px solid $color-oscuro;
+    transition: 1s ease-in-out;
+    &__type {
+      margin-bottom: $space_x2;
+      @include font-size($p);
+    }
+    &__title {
+      min-height: 30%;
+      h2 {
+        transition: 0.5s ease-in-out;
+        @include font-size($h2);
+        &:hover {
+          background: -webkit-linear-gradient($color-primario, $color-secundario);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    &__info {
+      padding: $space_x3 0 $space_x3 0;
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: $space;
+        width: 50px;
+        height: 50px;
+        border: 2px solid $color-oscuro;
+        border-radius: 100%;
+        background-color: $color-oscuro;
+        object-fit: cover;
+        object-position: center;
+      }
+      p {
+        margin: 0;
+        @include font-size($p);
+      }
+    }
+    &__preview {
+      padding: 0 0 $space_x2 0;
+      p {
+        margin: 0;
+        @include font-size($p);
+      }
+    }
+    &__tags {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      a {
+        padding: $space_half $space;
+        border: 1px solid $color-oscuro;
+
+        color: $color-oscuro;
+        transition: 500ms ease-in-out;
+        @include font-size(12px);
+        &:hover {
+          text-decoration: none;
+          color: $color-claro;
+          background-color: $color-oscuro;
+        }
+      }
+    }
+    &:hover {
+      transition: 0.5s ease-in-out;
+      background: $color-primario;
+      background: -moz-linear-gradient(
+        180deg,
+        get-opacity($color-primario, 0.1) 0%,
+        get-opacity($color-secundario, 0.1) 100%
+      );
+      background: -webkit-linear-gradient(
+        180deg,
+        get-opacity($color-primario, 0.1) 0%,
+        get-opacity($color-secundario, 0.1) 100%
+      );
+      background: linear-gradient(
+        180deg,
+        get-opacity($color-primario, 0.1) 0%,
+        get-opacity($color-secundario, 0.1) 100%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b034a",endColorstr="#080926",GradientType=1);
+    }
+  }
+
+  .cardsComments {
+    padding: $space_x3 $space_x3;
+    grid-column-gap: $space_x3;
+    margin: $space auto;
+    width: 60%;
+    text-align: left;
+    border-radius: $space;
+    @include display-grid;
+    @include grid-template-columns(15% auto 10%);
+    &__date {
+      padding: 0;
+      color: get-opacity($color-oscuro, 0.6);
+      @include font-size(12px);
+    }
+  }
+
+  .cardResults {
+    padding: $space_x2;
+    position: fixed;
+    right: 80px;
+    width: 350px;
+    border-left: 3px solid $color-oscuro;
+    border-right: 3px solid $color-oscuro;
+    border-bottom: 3px solid $color-oscuro;
+    background-color: $color-claro;
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    a,
+    h3 {
+      color: $color-oscuro;
+      font-weight: $normal;
+      transition: 500ms;
+      @include font-size($p);
+      &:hover {
+        color: $color-primario;
+        text-decoration: none;
+      }
+    }
+    li {
+      padding: $space 0;
+      border-bottom: 1px solid get-opacity($color-oscuro, 0.1);
+    }
+    p {
+      margin: 0;
+      @include font-size($p);
+    }
+  }
+}

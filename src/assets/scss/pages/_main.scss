@@ -1,0 +1,129 @@
+@import "./../tokens/colors";
+@import "./../tokens/spacings";
+@import "./../tokens/typos";
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  &__hero {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    text-align: left;
+    background-color: $color-variante;
+    @include display-grid;
+    @include grid-template-columns(auto);
+    &-content {
+      padding: $space_x2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      border-bottom: 3px solid $color-oscuro;
+      border-left: 3px solid $color-oscuro;
+      border-right: 3px solid $color-oscuro;
+      background-color: $color-variante;
+      h1 {
+        text-align: left;
+        margin: 0;
+        transition: 1s ease-in-out;
+        @include font-size($h2);
+      }
+      p {
+        padding: $space_x2 0;
+        margin: 0;
+        @include font-size($p);
+      }
+    }
+    &-image {
+      display: none;
+      width: 100%;
+      height: 100vh;
+    }
+  }
+  @include media(tablet){
+    &__hero {
+      padding: 0;
+      margin: 0 auto;
+      height: 100%;
+      text-align: left;
+      background-color: $color-variante;
+      @include display-grid;
+      @include grid-template-columns(30% auto);
+      &-content {
+        padding: $space_x2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        border-bottom: 3px solid $color-oscuro;
+        border-left: 3px solid $color-oscuro;
+        border-right: 3px solid $color-oscuro;
+        h1 {
+          margin: 0;
+          transition: 1s ease-in-out;
+          @include font-size($h1);
+        }
+        p {
+          padding: $space_x2 0;
+          margin: 0;
+        }
+      }
+      &-image {
+        display: inline;
+        background-color: $color-claro;
+        border-bottom: 3px solid $color-oscuro;
+        border-left: 3px solid $color-oscuro;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  @include media(desktop-s) {
+    height: 100%;
+    &__hero {
+      padding: 0;
+      margin: 0 auto;
+      height: 100%;
+      text-align: left;
+      background-color: $color-variante;
+      @include display-grid;
+      @include grid-template-columns(60% auto);
+      &-content {
+        padding: $space_x2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        border-bottom: 3px solid $color-oscuro;
+        border-left: 3px solid $color-oscuro;
+        border-right: 3px solid $color-oscuro;
+        h1 {
+          margin: 0;
+          transition: 1s ease-in-out;
+          @include font-size($h1);
+        }
+        p {
+          padding: $space_x2 0;
+          margin: 0;
+        }
+      }
+      &-image {
+        display: inline;
+        background-color: $color-claro;
+        border-bottom: 3px solid $color-oscuro;
+        border-left: 3px solid $color-oscuro;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

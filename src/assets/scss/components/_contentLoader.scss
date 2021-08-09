@@ -1,0 +1,11 @@
+@import "./../tokens/colors";
+@import "./../tokens/spacings";
+@import "./../tokens/typos";
+
+.contentLoader {
+  padding: $space_x3;
+  margin: 0 auto;
+  width: 40%;
+  height: 80%;
+  text-align: center;
+}

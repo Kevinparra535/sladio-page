@@ -1,0 +1,43 @@
+@import "./../tokens/colors";
+@import "./../tokens/spacings";
+@import "./../tokens/typos";
+
+.learnOrTeach {
+  padding: $space_x3 $space_x2;
+  margin-top: $space_x3;
+  text-align: center;
+  color: $color-bg-claro;
+  border: 3px solid $color-oscuro;
+  background-color: $color-variante-dos;
+  h1 {
+    margin: $space_x3 0;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    transition: 1s ease-in-out;
+    @include font-size($h3);
+  }
+  p {
+    margin: 0 auto;
+    width: 100%;
+    text-align: left;
+  }
+  a {
+    color: $color-claro;
+    text-decoration: underline;
+    font-weight: $medium;
+  }
+  @include media(desktop-s) {
+    padding: $space_x3 0;
+    margin-top: $space_x3;
+    text-align: center;
+    h1 {
+      margin: $space_x3 0;
+      transition: 1s ease-in-out;
+      @include font-size($h1);
+    }
+    p {
+      margin: 0 auto;
+      width: 70%;
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import "./../tokens/colors";
+@import "./../tokens/spacings";
+@import "./../tokens/typos";
+
+.comments {
+  padding: $space_x2 0;
+  text-align: center;
+  color: $color-claro;
+  background-color: $color-oscuro;
+  &__title {
+    background: -webkit-linear-gradient($color-primario, $color-secundario);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include font-size($h3);
+  }
+  &__containers {
+    padding: $space_x3 0;
+    margin: 0 auto;
+    width: 90%;
+    text-align: left;
+    input {
+      @include inputs;
+    }
+  }
+  @include media(desktop-s) {
+    padding: $space_x3 0;
+    text-align: center;
+    color: $color-claro;
+    background-color: $color-oscuro;
+    &__title {
+      background: -webkit-linear-gradient($color-primario, $color-secundario);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      @include font-size($h2);
+    }
+  }
+  @include media(desktop-s) {
+    padding: $space_x3 0;
+    &__title {
+      background: -webkit-linear-gradient($color-primario, $color-secundario);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      @include font-size($h2);
+    }
+    &__containers {
+      padding: $space_x3 0;
+      margin: 0 auto;
+      width: 60%;
+      text-align: left;
+      input {
+        @include inputs;
+      }
+    }
+  }
+}
+.wmde-markdown {
+  width: 100%;
+}
+.w-md-editor-preview {
+  width: 50%;
+}
