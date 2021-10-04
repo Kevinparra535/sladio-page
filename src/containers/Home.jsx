@@ -1,7 +1,19 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
+
+import Sladio from "sladio";
+import '../../node_modules/sladio/build/css/core.css';
 
 
-const Home = () => (<h1>HOME</h1>)
+const Home = () => {
 
+  new Sladio({})
 
-export default Home
+  return (
+    <main className="main content" id="page-wrap">
+      Sladio
+    </main>
+  );
+};
+
+export default Home;

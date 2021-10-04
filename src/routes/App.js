@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import Layout from "../Layout";
+import Layout from "../Layout/Layout";
 import Home from "../containers/Home.jsx";
 import Docs from "../containers/Docs";
 import Demos from "../containers/Demos";
